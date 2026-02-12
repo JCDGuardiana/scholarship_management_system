@@ -23,7 +23,8 @@
               </div>
 
               <div class="col-md-6 right-box p-5" style="background-color:#75ba75;">
-                <div class="row align-items-center">
+                <form action="../controller/sign_in_controller.php" method="POST">
+                  <div class="row align-items-center">
                   <div class="header mb-5">
                     <p class="fs-3 text-light text-center text-uppercase" style="font-family: var(--font2); letter-spacing: .1em;">Login</p>
                   </div>
@@ -32,14 +33,14 @@
                         <i class="fa-solid fa-envelope fs-4 text-light me-2" style="line-height: 1;"></i>
                         <label for="email" class="form-label mb-1 fs-5 text-light" style="font-family: var(--font1); letter-spacing: .1em; line-height: 1;">Email</label>
                       </div>
-                      <input type="email" class="form-control rounded-1 p-2" placeholder="@gmail.com">
+                      <input type="email" name="email" class="form-control rounded-1 p-2" placeholder="Email" required autocomplete="off">
                   </div>
                   <div class="mb-4 d-inline-flex justify-content-center align-items-center flex-column">
                       <div class="input-group d-flex align-items-center text-alignment-center gap-2 mb-3">
                         <i class="fa-solid fa-lock me-2 fs-4 text-light" style="line-height: 1;"></i>
                         <label for="password" class="form-label mb-1 fs-5 text-light" style="font-family: var(--font1); letter-spacing: .1em; line-height: 1;">Password</label>
                       </div>
-                      <input type="password" class="form-control rounded-1 p-2" placeholder="password">
+                      <input type="password" name="password" class="form-control rounded-1 p-2" placeholder="Password" required >
                   </div>
                   <div class="mb-5 d-flex justify-content-between">
                     <div class="form-check">
@@ -50,13 +51,15 @@
                       <a href="#">Forgot password</a>
                     </div>
                   </div>
-                  <div class="input-group mb-2">
-                      <button class="btn btn-success w-100 p-2">Login</button>
+                  <div class="d-grid gap-3 mb-2">
+                      <button type="submit" name="loginBTN" class="btn btn-success w-100 p-2">Login</button>
+                      <button type="submit" name="googleBTN" class="btn btn-primary w-100 p-2"><i class="fa-brands fa-google me-2"></i> Login with google</button>
                   </div>
                   <div class="forgot mt-5 text-center">
                       <a href="auth_signup.php" class="text-decoration-none text-light fs-6 "style="font-family: var(--font2);">Didn't have an account?? <u>Sign up</u></a>
                     </div>
                 </div>
+                </form>
               </div>
           </div>
         </div>
